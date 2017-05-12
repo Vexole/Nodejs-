@@ -1,15 +1,25 @@
 var time = 3000;
 var current = 0;
 var wait = 500;
+var percent = 0;
 
-console.log("Waiting!!");
+function percentage(p){
+	process.stdout.clearLine();
+	process.stdout.cursorTo(0);
+	process.stdout.write(`waiting ... ${p}%`);
+}
 
 var interval = setInterval(function(){
 	current += wait;
-	console.log(`${current/1000} seconds waited ...`);
+	percent = Math.floor((current/time)*100);
+	percentage(percent);
 }, wait);
 
 setTimeout(function(){
-	console.log("Done");
 	clearInterval(interval);
+	percentage(100);
+	console.log("\nDone");
 }, time);
+
+process.stdout.write('\n\n');
+percentage(percent);
