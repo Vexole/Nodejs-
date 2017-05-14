@@ -1,0 +1,7 @@
+npm install -g node-dev
+npm install -g jshint
+npm install -g underscore
+npm install -g node-dev
+
+
+httpster-p 3000 -d public
