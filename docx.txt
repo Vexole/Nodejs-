@@ -5,3 +5,7 @@ npm install -g node-dev
 
 
 httpster-p 3000 -d public
+
+npm install express
+npm install cors -- save
+npm install body-parser --save

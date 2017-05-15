@@ -31,7 +31,7 @@ var req = https.request(options, function(res){
 			}
 			console.log("File Downloaded");
 		});
-	});
+	}); 
 });
 
 req.on('error', function(err){
